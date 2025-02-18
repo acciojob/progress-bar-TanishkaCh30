@@ -2,7 +2,7 @@ let circles = document.getElementsByClassName("circle");
 let nextBtn = document.querySelector("#next");
 let prevBtn = document.querySelector("#prev");
 let lines = document.getElementsByClassName("prog-line");
-
+let count=0;
 prevBtn.disabled=true;
 
 let circleArr = [...circles];
@@ -23,20 +23,7 @@ nextBtn.addEventListener("click" ,()=>{
 	}
 });
 
-let newCount=5;
-prevBtn.addEventListener("click" , () =>{
-	newCount--;
-	for(let i = 0 ; i<circleArr.length ; i++){
-		for(let j =0 ; j<linesArr.length ; j++)
-		if(newCount!=0){
-		circleArr[newCount].classList.remove("active");
-		}
-		else{
-			nextBtn.disabled = false;
-		}
-		linesArr[newCount].classList.remove("active");
-		}
 	
-});
+
 
 
