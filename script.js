@@ -8,8 +8,6 @@ prevBtn.disabled=true;
 let circleArr = [...circles];
 let linesArr = [...lines];
 
-let count=0;
-
 nextBtn.addEventListener("click" ,()=>{
 	prevBtn.disabled=false;
 	count++;
@@ -24,4 +22,21 @@ nextBtn.addEventListener("click" ,()=>{
 		linesArr[count-1].classList.add("active");
 	}
 });
+
+let newCount=5;
+prevBtn.addEventListener("click" , () =>{
+	newCount--;
+	for(let i = 0 ; i<circleArr.length ; i++){
+		for(let j =0 ; j<linesArr.length ; j++)
+		if(newCount!=0){
+		circleArr[newCount].classList.remove("active");
+		}
+		else{
+			nextBtn.disabled = false;
+		}
+		linesArr[newCount].classList.remove("active");
+		}
+	
+});
+
 
