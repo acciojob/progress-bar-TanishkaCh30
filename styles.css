@@ -1,1 +1,21 @@
-/*  your css code here. If applicable */
+.wrapper{
+	display:flex;
+}
+.circle{
+	height:100px;
+	width:100px;
+	border:1px solid black;;
+	border-radius:50%;
+	margin-bottom:2rem;
+}
+.prog-line{
+	height:8px;
+	width:40px;
+	border:1px solid black;
+	margin-top:3rem;
+	border-radius:2px;
+}
+.active{
+	background-color:#A0C878;
+	border:1px solid green;
+}
